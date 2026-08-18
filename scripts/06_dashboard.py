@@ -119,7 +119,7 @@ else:
     daily_region = filtered_df.groupby([filtered_df['timestamp'].dt.date, 'region'])['energy_kwh'].sum().reset_index()
     fig_trend = px.line(daily_region, x='timestamp', y='energy_kwh', color='region', title="Daily Consumption by Region")
 
-st.plotly_chart(fig_trend, use_container_width=True)
+st.plotly_chart(fig_trend, width='stretch')
 
 # --- 3. Hourly Load Profile & 4. Heatmap ---
 col1, col2 = st.columns(2)
@@ -133,7 +133,7 @@ with col1:
     peak_val = hourly_solar['energy_kwh'].max()
     peak_idx = hourly_solar.loc[hourly_solar['energy_kwh'] == peak_val, 'timestamp'].values[0]
     fig_load.add_annotation(x=peak_idx, y=peak_val, text="Peak", showarrow=True, arrowhead=1)
-    st.plotly_chart(fig_load, use_container_width=True)
+    st.plotly_chart(fig_load, width='stretch')
 
 with col2:
     st.markdown("### Consumption Heatmap")
@@ -143,7 +143,7 @@ with col2:
     days_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     heatmap_data = heatmap_data.reindex(columns=days_order)
     fig_heat = px.imshow(heatmap_data, title="Avg Consumption (Hour vs Day)", labels=dict(x="Day of Week", y="Hour of Day", color="Avg kWh"), aspect="auto")
-    st.plotly_chart(fig_heat, use_container_width=True)
+    st.plotly_chart(fig_heat, width='stretch')
 
 
 # --- 5. Regional Comparison & 6. Solar Impact Analysis ---
@@ -154,11 +154,11 @@ with col3:
     if 'appliance_category' in filtered_df.columns:
         reg_app = filtered_df.groupby(['region', 'appliance_category'])['energy_kwh'].sum().reset_index()
         fig_reg = px.bar(reg_app, x='region', y='energy_kwh', color='appliance_category', title="Consumption by Region & Category", barmode='stack')
-        st.plotly_chart(fig_reg, use_container_width=True)
+        st.plotly_chart(fig_reg, width='stretch')
     else:
         reg_total = filtered_df.groupby('region')['energy_kwh'].sum().reset_index()
         fig_reg = px.bar(reg_total, x='region', y='energy_kwh', title="Total Consumption by Region")
-        st.plotly_chart(fig_reg, use_container_width=True)
+        st.plotly_chart(fig_reg, width='stretch')
 
 
 with col4:
@@ -209,7 +209,7 @@ try:
         col_m1.metric("Mean Absolute Error (MAE)", f"{mae:.2f}")
         col_m2.metric("Root Mean Squared Error (RMSE)", f"{rmse:.2f}")
         
-        st.plotly_chart(fig_fore, use_container_width=True)
+        st.plotly_chart(fig_fore, width='stretch')
     else:
         st.info("Not enough data points for forecasting.")
 except Exception as e:
