@@ -4,7 +4,7 @@
 This project provides a comprehensive analysis of household energy consumption in various regions to support data-driven decision-making for solar energy products. By analyzing hourly consumption profiles, regional differences, and the impact of existing solar installations, this project identifies patterns, forecasts future consumption, and recommends solar solutions for potential off-grid and semi-urban households. 
 
 ## Business Context
-For off-grid solar energy companies like **Sun King**, understanding how and when households consume energy is critical. It enables:
+For off-grid solar energy companies, understanding how and when households consume energy is critical. It enables:
 1. **Optimized Product Design**: Tailoring battery capacity and solar panel sizes to match actual household load profiles.
 2. **Targeted Marketing**: Identifying households and regions that would benefit most from specific solar packages based on their current grid costs and usage patterns.
 3. **Grid Dependency Reduction**: Demonstrating clear ROI and cost-savings for users switching to solar.
