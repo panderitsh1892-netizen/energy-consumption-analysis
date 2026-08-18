@@ -50,7 +50,9 @@ energy-consumption-analysis/
 │   ├── 04_forecasting.py         # Time series forecasting models
 │   ├── 05_solar_recommendation.py# Solar ROI recommendation engine
 │   ├── 06_dashboard.py           # Streamlit interactive dashboard
+│   ├── 07_tableau_prep.py        # Prepares data for Tableau
 │   └── run_dashboard.sh          # Dashboard runner script
+├── tableau_data/                 # Processed CSVs for Tableau dashboard
 ├── outputs/
 │   └── solar_recommendations.csv
 └── visualizations/
