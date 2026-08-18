@@ -1,5 +1,7 @@
 # Energy Consumption Analysis & Forecasting ⚡
 
+[![Tableau Dashboard](https://img.shields.io/badge/Tableau-Interactive_Dashboard-E97627?style=for-the-badge&logo=tableau&logoColor=white)](https://public.tableau.com/views/energyconsumptiondashboard_17870813255410/Dashboard1)
+
 ## Overview
 This project provides a comprehensive analysis of household energy consumption in various regions to support data-driven decision-making for solar energy products. By analyzing hourly consumption profiles, regional differences, and the impact of existing solar installations, this project identifies patterns, forecasts future consumption, and recommends solar solutions for potential off-grid and semi-urban households. 
 
@@ -92,5 +94,3 @@ Or manually: `streamlit run scripts/06_dashboard.py`
 - **Targeted Rural Campaigns**: The recommendation engine clearly identifies rural households with high budget pressure as the best market for entry-level solar products. 
 - **Tiered Solar Packages**: Use the generated clusters to offer Small, Medium, and Large solar tiers perfectly tailored to the 3 distinct consumption profiles found in the clustering analysis.
 
-## Tableau Dashboard
-Check out the prepared data in `tableau_data/` and follow the [Tableau Guide](../TABLEAU_GUIDE.md) to build the interactive dashboard.
